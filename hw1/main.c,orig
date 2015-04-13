@@ -1,0 +1,36 @@
+/* Program Example 14.1 Sets up a digital output pin using control registers and flashes an led.
+ * */
+
+//function prototypes
+void delay(void);
+
+//define addresses of digital i/o control registers, as pointers to volatile data
+
+//#define FIO1DIR18  (*(volatile unsigned char *)(0x2009c020))
+//#define FIO1PIN18  (*(volatile unsigned char *)(0x2009c034))
+#define FIO2DIR5  (*(volatile unsigned char *)(0x2009c045))
+#define FIO2PIN5  (*(volatile unsigned char *)(0x2009c054))
+#define FIO2DIR0  (*(volatile unsigned char *)(0x2009c040))
+#define FIO2PIN0  (*(volatile unsigned char *)(0x2009c054))
+
+int main() {
+   FIO2DIR0=0x20;
+   //FIO1DIR18 |= 1<<18;
+   while(1) {
+       //FIO1PIN18 |= 1<<18;
+       FIO2PIN5 |= 0x20;
+       //delay();
+       //FIO1PIN18 &= ~(1<<18);
+       FIO2PIN5 &= ~0x20;
+       //delay();
+   }
+}
+
+//delay function
+void delay(void) {
+   	volatile int j;
+   for (j=0;j<10;j++) {
+      j++;
+      j--;
+   }
+}
