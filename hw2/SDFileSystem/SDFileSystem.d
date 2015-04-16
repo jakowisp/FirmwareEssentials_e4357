@@ -1,4 +1,5 @@
-main.o: main.cpp mbed/mbed.h mbed/platform.h \
+SDFileSystem/SDFileSystem.o: SDFileSystem/SDFileSystem.cpp \
+ SDFileSystem/SDFileSystem.h mbed/mbed.h mbed/platform.h \
  mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768/device.h \
  mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/objects.h \
  mbed/TARGET_LPC1768/cmsis.h mbed/TARGET_LPC1768/LPC17xx.h \
@@ -24,11 +25,12 @@ main.o: main.cpp mbed/mbed.h mbed/platform.h \
  mbed/us_ticker_api.h mbed/Timeout.h mbed/LocalFileSystem.h \
  mbed/FileSystemLike.h mbed/DirHandle.h mbed/InterruptIn.h \
  mbed/gpio_irq_api.h mbed/wait_api.h mbed/sleep_api.h mbed/rtc_time.h \
- SDFileSystem/SDFileSystem.h SDFileSystem/FATFileSystem/FATFileSystem.h \
- mbed/FileSystemLike.h mbed/FileHandle.h \
- SDFileSystem/FATFileSystem/ChaN/ff.h \
+ SDFileSystem/FATFileSystem/FATFileSystem.h mbed/FileSystemLike.h \
+ mbed/FileHandle.h SDFileSystem/FATFileSystem/ChaN/ff.h \
  SDFileSystem/FATFileSystem/ChaN/integer.h \
- SDFileSystem/FATFileSystem/ChaN/ffconf.h
+ SDFileSystem/FATFileSystem/ChaN/ffconf.h mbed/mbed_debug.h
+
+SDFileSystem/SDFileSystem.h:
 
 mbed/mbed.h:
 
@@ -168,8 +170,6 @@ mbed/sleep_api.h:
 
 mbed/rtc_time.h:
 
-SDFileSystem/SDFileSystem.h:
-
 SDFileSystem/FATFileSystem/FATFileSystem.h:
 
 mbed/FileSystemLike.h:
@@ -181,3 +181,5 @@ SDFileSystem/FATFileSystem/ChaN/ff.h:
 SDFileSystem/FATFileSystem/ChaN/integer.h:
 
 SDFileSystem/FATFileSystem/ChaN/ffconf.h:
+
+mbed/mbed_debug.h:

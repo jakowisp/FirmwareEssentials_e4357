@@ -1,0 +1,332 @@
+arm-none-eabi-gcc  -mcpu=cortex-m3 -mthumb -c -g -fno-common -fmessage-length=0 -Wall -fno-exceptions -ffunction-sections -fdata-sections -fomit-frame-pointer -MMD -MP -DNDEBUG -Os -DTARGET_LPC1768 -DTARGET_M3 -DTARGET_CORTEX_M -DTARGET_NXP -DTARGET_LPC176X -DTARGET_MBED_LPC1768 -DTOOLCHAIN_GCC_ARM -DTOOLCHAIN_GCC -D__CORTEX_M3 -DARM_MATH_CM3 -DMBED_BUILD_TIMESTAMP=1428389373.23 -D__MBED__=1  -std=gnu99   -I. -I./mbed -I./mbed/TARGET_LPC1768 -I./mbed/TARGET_LPC1768/TOOLCHAIN_GCC_ARM -I./mbed/TARGET_LPC1768/TARGET_NXP -I./mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X -I./mbed/TARGET_LPC1768/TARGET_NXP/TARGET_LPC176X/TARGET_MBED_LPC1768  -o main.o main.c
+In file included from ./mbed/mbed.h:32:0,
+                 from main.c:10:
+./mbed/DigitalIn.h:23:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/DigitalIn.h:23:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:33:0,
+                 from main.c:10:
+./mbed/DigitalOut.h:22:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/DigitalOut.h:22:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:34:0,
+                 from main.c:10:
+./mbed/DigitalInOut.h:23:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/DigitalInOut.h:23:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:35:0,
+                 from main.c:10:
+./mbed/BusIn.h:22:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/BusIn.h:22:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:36:0,
+                 from main.c:10:
+./mbed/BusOut.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/BusOut.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:37:0,
+                 from main.c:10:
+./mbed/BusInOut.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/BusInOut.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:38:0,
+                 from main.c:10:
+./mbed/PortIn.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/PortIn.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:39:0,
+                 from main.c:10:
+./mbed/PortInOut.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/PortInOut.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:40:0,
+                 from main.c:10:
+./mbed/PortOut.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/PortOut.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:41:0,
+                 from main.c:10:
+./mbed/AnalogIn.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/AnalogIn.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:42:0,
+                 from main.c:10:
+./mbed/AnalogOut.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/AnalogOut.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:43:0,
+                 from main.c:10:
+./mbed/PwmOut.h:24:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/PwmOut.h:24:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/FileLike.h:19:0,
+                 from ./mbed/Stream.h:20,
+                 from ./mbed/Serial.h:23,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/FileBase.h:45:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/FileBase.h:45:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/FileLike.h:20:0,
+                 from ./mbed/Stream.h:20,
+                 from ./mbed/Serial.h:23,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/FileHandle.h:31:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/FileHandle.h:31:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/Stream.h:20:0,
+                 from ./mbed/Serial.h:23,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/FileLike.h:22:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/FileLike.h:22:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/Serial.h:23:0,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/Stream.h:22:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Stream.h:22:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+./mbed/Stream.h:34:19: error: macro "putc" requires 2 arguments, but only 1 given
+     int putc(int c);
+                   ^
+In file included from ./mbed/SerialBase.h:24:0,
+                 from ./mbed/Serial.h:24,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/FunctionPointer.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/FunctionPointer.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/Serial.h:24:0,
+                 from ./mbed/mbed.h:44,
+                 from main.c:10:
+./mbed/SerialBase.h:27:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/SerialBase.h:27:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:44:0,
+                 from main.c:10:
+./mbed/Serial.h:27:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Serial.h:27:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:45:0,
+                 from main.c:10:
+./mbed/SPI.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/SPI.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:46:0,
+                 from main.c:10:
+./mbed/SPISlave.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/SPISlave.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:47:0,
+                 from main.c:10:
+./mbed/I2C.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/I2C.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:48:0,
+                 from main.c:10:
+./mbed/I2CSlave.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/I2CSlave.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:49:0,
+                 from main.c:10:
+./mbed/Ethernet.h:23:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Ethernet.h:23:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:50:0,
+                 from main.c:10:
+./mbed/CAN.h:27:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/CAN.h:27:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:51:0,
+                 from main.c:10:
+./mbed/RawSerial.h:26:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/RawSerial.h:26:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+./mbed/RawSerial.h:67:19: error: macro "putc" requires 2 arguments, but only 1 given
+     int putc(int c);
+                   ^
+In file included from ./mbed/mbed.h:54:0,
+                 from main.c:10:
+./mbed/Timer.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Timer.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/Ticker.h:19:0,
+                 from ./mbed/mbed.h:55,
+                 from main.c:10:
+./mbed/TimerEvent.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/TimerEvent.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:55:0,
+                 from main.c:10:
+./mbed/Ticker.h:22:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Ticker.h:22:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:56:0,
+                 from main.c:10:
+./mbed/Timeout.h:21:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/Timeout.h:21:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/FileSystemLike.h:23:0,
+                 from ./mbed/LocalFileSystem.h:23,
+                 from ./mbed/mbed.h:57,
+                 from main.c:10:
+./mbed/DirHandle.h:33:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/DirHandle.h:33:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+./mbed/DirHandle.h:92:13: error: expected '=', ',', ';', 'asm' or '__attribute__' before ':' token
+ typedef mbed::DirHandle DIR;
+             ^
+./mbed/DirHandle.h:94:8: error: expected identifier or '(' before string constant
+ extern "C" {
+        ^
+In file included from ./mbed/LocalFileSystem.h:23:0,
+                 from ./mbed/mbed.h:57,
+                 from main.c:10:
+./mbed/FileSystemLike.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/FileSystemLike.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:57:0,
+                 from main.c:10:
+./mbed/LocalFileSystem.h:25:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/LocalFileSystem.h:25:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from ./mbed/mbed.h:58:0,
+                 from main.c:10:
+./mbed/InterruptIn.h:27:1: error: unknown type name 'namespace'
+ namespace mbed {
+ ^
+./mbed/InterruptIn.h:27:16: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+ namespace mbed {
+                ^
+In file included from main.c:10:0:
+./mbed/mbed.h:63:1: error: unknown type name 'using'
+ using namespace mbed;
+ ^
+./mbed/mbed.h:63:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'mbed'
+ using namespace mbed;
+                 ^
+./mbed/mbed.h:64:1: error: unknown type name 'using'
+ using namespace std;
+ ^
+./mbed/mbed.h:64:17: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'std'
+ using namespace std;
+                 ^
+main.c:12:1: error: unknown type name 'Serial'
+ Serial pc(USBTX,USBRX);
+ ^
+main.c:12:1: warning: parameter names (without types) in function declaration
+main.c: In function 'generateDumpvars':
+main.c:61:12: error: request for member 'printf' in something not a structure or union
+          pc.printf("#%d\n",i<<1);
+            ^
+main.c:62:12: error: request for member 'printf' in something not a structure or union
+          pc.printf("b%b\n",sample0[i]);
+            ^
+main.c:66:13: error: request for member 'printf' in something not a structure or union
+           pc.printf("#%d",(i<<1 | 1));
+             ^
+main.c:67:13: error: request for member 'printf' in something not a structure or union
+           pc.printf("b%b\n",sample1[i]);
+             ^
+make: *** [main.o] Error 1
