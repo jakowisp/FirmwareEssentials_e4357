@@ -10,6 +10,7 @@
 #include "mbed.h"
 #include "SDFileSystem.h"
  
+DigitalOut complete(LED1);
 SDFileSystem sd(p5, p6, p7, p8, "sd"); // the pinout on the mbed Cool Components workshop board
 FILE *fp;
 
@@ -115,6 +116,7 @@ void generateDumpvars(){
  {
     int i;
     setupPWM1();
+    complete=0;
     
     for(i = 0 ; i < 16*1024; i++) {
        sample0[i] = LPC_GPIO0->FIOPIN0;
@@ -122,7 +124,7 @@ void generateDumpvars(){
     }
     generateDumpvars();
 
-    //error("unexpected Finish!!");
+    complete=1;
     while(1) {
     }
     return 0;
