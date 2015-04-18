@@ -10,8 +10,7 @@
 #include "mbed.h"
 #include "SDFileSystem.h"
  
-DigitalOut complete(LED1);
-SDFileSystem sd(p5, p6, p7, p8, "sd"); // the pinout on the mbed Cool Components workshop board
+//SDFileSystem sd(p5, p6, p7, p8, "sd"); // the pinout on the mbed Cool Components workshop board
 FILE *fp;
 
 unsigned char    sample0[16*1024] __attribute__((section("AHBSRAM1")));
@@ -57,66 +56,65 @@ void setupPWM1(void){
 
 void printbinary(unsigned char inputValue) {
     if(((unsigned int)inputValue & 1)> 0) {
-          fprintf(fp,"1");
+          printf("1");
        } else {
-          fprintf(fp,"0");
+          printf("0");
        }
 }
 
 
 void printVCDHeader(void){
-   fprintf(fp,"\n\r$date\n\r");
-   fprintf(fp,"$end\n\r");
-   fprintf(fp,"$version\n\r");
-   fprintf(fp,"Mbed Logic Analyzer 0.1\n\r");
-   fprintf(fp,"$end\n\r");
-   fprintf(fp,"$comment\n\r");
-   fprintf(fp,"Developed by Dwayne Dilbeck\n\r");
-   fprintf(fp,"$end\n\r");
-   fprintf(fp,"$timescale 80ns\n\r");
-   fprintf(fp,"$scope module logic $end\n\r");
-   fprintf(fp,"$var wire 1 \( data0 $end\n\r");
-   fprintf(fp,"$upscope $end\n\r");
-   fprintf(fp,"$enddefinitions\n\r");
+   printf("\n\r$date\n\r");
+   printf("$end\n\r");
+   printf("$version\n\r");
+   printf("Mbed Logic Analyzer 0.1\n\r");
+   printf("$end\n\r");
+   printf("$comment\n\r");
+   printf("Developed by Dwayne Dilbeck\n\r");
+   printf("$end\n\r");
+   printf("$timescale 80ns\n\r");
+   printf("$scope module logic $end\n\r");
+   printf("$var wire 1 \( data0 $end\n\r");
+   printf("$upscope $end\n\r");
+   printf("$enddefinitions\n\r");
    
 }
 
 void generateDumpvars(){
     unsigned int i;
     unsigned char volatile previousValue;
-    mkdir("/sd/vcds", 0777);
+ 
     
-    fp = fopen("/sd/vcds/data0.vcd", "w");
     
     printVCDHeader();
-    fprintf(fp,"$dumpvars\n\r"); 
+    printf("$dumpvars\n\r"); 
     previousValue = sample0[0];
     printbinary(previousValue);
-    fprintf(fp,"\(\n"); 
-    fprintf(fp,"\r"); 
-    fprintf(fp,"$end\n\r"); 
-    for(i = 0; i < 16*1024; i++) {
+    printf("\(\n"); 
+    printf("\r"); 
+    printf("$end\n\r"); 
+    for(i = 0; i < 16; i++) {
        if(previousValue != sample0[i]) {
          previousValue = sample0[i];
-         fprintf(fp,"\r#%d\n\r",i*2);
+         printf("\r#%d\n\r",i*2);
          printbinary(previousValue);
-         fprintf(fp,"\(\n"); 
+         printf("\(\n"); 
        }
        if(previousValue != sample1[i]) {
           previousValue = sample1[i];
-          fprintf(fp,"\r#%d\n\r",i*2+1);
+          printf("\r#%d\n\r",i*2+1);
          printbinary(previousValue);
-         fprintf(fp,"\(\n"); 
+         printf("\(\n"); 
        }
     }
-    fclose(fp);
 }
  
  int main()
  {
     int i;
     setupPWM1();
-    complete=0;
+    LPC_GPIO1->FIODIR=1<<18;
+    LPC_GPIO1->FIOSET=1<<18;
     
     for(i = 0 ; i < 16*1024; i++) {
        sample0[i] = LPC_GPIO0->FIOPIN0;
@@ -124,7 +122,7 @@ void generateDumpvars(){
     }
     generateDumpvars();
 
-    complete=1;
+    LPC_GPIO1->FIOCLR= 1<<18;
     while(1) {
     }
     return 0;
