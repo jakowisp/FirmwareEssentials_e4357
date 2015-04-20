@@ -1,0 +1,52 @@
+BEGIN
+--------------------------------------------------------------------
+Q1: How many microcontrollers in the mbed LPC1768 board?
+
+23 micro controllers
+
+Ethernet MAC, 
+USB interface,
+DMA controller
+4 UARTS
+2 CAN
+2 ssp
+3 i2c
+1 spi
+1 i2s
+2 pwm
+4 timers
+1 RTC
+
+
+--------------------------------------------------------------------
+Q2: What is the size (in GB) of the Flash Memory ("USB Dsik") of the LPC1768?
+
+1.96 MB USB MSD mbed 
+512KB of flash memory
+0.000049GB
+
+
+--------------------------------------------------------------------
+Q3: Name 3 functions (or features) that mbed USB cable provided:
+
+1.USB MSD
+2.USB Serial
+3.CMSIS-DAP
+
+
+--------------------------------------------------------------------
+Q4: What is the name of the Ethernet PHY chip in the mbed board (LPC1768)?
+
+There is no Ethernet Phy on the LPC1768, only a DMA controller for RMII connection.
+
+
+
+--------------------------------------------------------------------
+Q5: Reference LPC17xx_UM10360.pdf (Chapter 2)
+    What are the GPIO address window?
+0x2009c000 - 0x2009ffff
+
+
+
+
+END
