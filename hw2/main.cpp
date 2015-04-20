@@ -108,10 +108,49 @@ void generateDumpvars(){
        }
     }
 }
+
+//int xcomputeFrequncySignal2(void){
+
+int getPeriodCount(unsigned char mask) {
+    int trans[4];
+    unsigned char previousValue,temp;
+    int i,j;
+
+    previousValue = 0x0; 
+    trans[0]=0;
+    for( j = 0 ; j<3; j++) {
+    trans[j+1]=0;
+    for( i = trans[j]/2+trans[j]%2; i< 16*1024 || trans[j+1] >0 ; i++) {
+        temp = sample0[i] & mask;
+        if (temp != previousValue) {
+           previousValue = temp;
+           trans[j+1]=2*i;
+           break;  
+        }
+        temp = sample1[i] & mask;
+        if (temp != previousValue) {
+           previousValue = temp;
+           trans[j+1]=2*i+1;
+           break;  
+        }
+    }
+    if (trans[j+1] ==0)
+       break;
+    }
+
+
+
+
+    if ( trans[3] == 0 || trans[2] == 0 || trans[1] == 0)
+        return -1;
+    else
+        return trans[3] - trans[1];
+}
+
  
  int main()
  {
-    int i;
+    int i,ref,samp;
     setupPWM1();
     LPC_GPIO1->FIODIR=1<<18;
     LPC_GPIO1->FIOSET=1<<18;
@@ -122,6 +161,11 @@ void generateDumpvars(){
     }
     generateDumpvars();
 
+    ref=getPeriodCount(0x1);
+    samp=getPeriodCount(0x2);
+    printf("\n\rSamples Per 2Mhz Reference: %d\n\r", getPeriodCount(0x1));
+    printf("Samples Per Sampled signal: %d\n\r", getPeriodCount(0x2));
+    printf("Frequency is: %dHz\n\r", ref*2000000/samp); 
     LPC_GPIO1->FIOCLR= 1<<18;
     while(1) {
     }
