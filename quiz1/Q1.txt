@@ -1,0 +1,112 @@
+BEGIN
+--------------------------------------------------------------------
+Q1: Is there any compile error with the following code (if any)?
+
+	unsigned int Arr[16];
+	3[Arr] = 7; 
+ 
+Explain:
+3[Arr] is a syntax error. it should read Arr[3]
+
+
+
+
+--------------------------------------------------------------------
+Q2: What is the difference between the following 3 statements? 
+
+const int * px; 
+int const * px; 
+int * const px; 
+
+Answer: 1 & 2 are identical functionally. 3. is a syntax error.
+
+Is there any compile error for the following cases?
+case1: 
+int x = 13; 
+const int * px; 
+px = & x; 
+
+Answer: Compiles clean.
+
+case 2: 
+int x = 13; 
+int const * px; 
+px = & x; 
+
+Answer: Compiles clean.
+
+case 3: 
+int x = 13; 
+int * const px; 
+px = & x; 
+
+Answer: Compile Error: Error assign to ready only object
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------------------
+Q3: Write a function to set or clear ith bit of a 32-bit register. 
+	Where ith (0-based) := {0, 1, 2, …, 31 } 
+void reg_set(volatile unsigned int * pReg, int ith) 
+{ 
+
+*pReg |= 1<<ith;
+
+
+
+} 
+
+void reg_clear(volatile unsigned int * pReg, int ith) 
+{ 
+
+  *pReg &= ~(1<<ith);
+
+
+
+} 
+
+
+
+--------------------------------------------------------------------
+Q4: Write a swap function in C.
+void swap(unsigned int * px, unsigned int *py) { 
+
+//Use XOR to swap using only 2 registers. 
+  *px = *px ^ *py;
+  *py = *px ^ *py;
+  *px = *px ^ *py;
+  
+
+
+
+
+
+} 
+
+--------------------------------------------------------------------
+Q5:	What is the output of the following code? (Given: sizeof(unsigned int) is 4) Page 34 
+
+unsigned int Arr[16]; 
+unsigned int a0 = (unsigned int) &Arr[0]; 
+unsigned int a3 = (unsigned int) &Arr[3]; 
+printf(“%d\n”, a3 – a0); 
+
+
+
+
+
+ Answer: 16.
+
+
+
+
+END
