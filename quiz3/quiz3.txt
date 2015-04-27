@@ -1,0 +1,20 @@
+1. What is the mask value for LED1?
+ What is the address of FIOSET?
+LED1 is Port1 Pin 28... The MASK is 0x2000
+FIOSET for PORT1 is 0x2009c038
+
+
+2. what is the  rs232 Frame
+
+Startbit,Data word,paritybit,Stopbit
+
+3. Explain the start and stop condition of i2c.
+A start or stop occurs when the clock is held high and the data line goes low.  This is a state defined in the standard.
+
+4. Is the i2c acknowledge SDA LOW or SDA HIGH.  
+SDA LOW.  
+
+5. Tell me about the DDR3 write leveling concept in one sentence.
+Compensation method for delays in the loading of data, that involves sampling the clock and generating a pulse on the rising edge of the clock.
+
+
