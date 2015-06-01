@@ -8,7 +8,7 @@
 
    void vcd::printbinary(unsigned char inputValue) {
       unsigned int temp;
-      for(int i=7;i<0;i--) {
+      for(int i=7;i>=0;i--) {
          temp = (unsigned int)inputValue & 1<<i;
          if(temp > 0) {
              printf("1");
