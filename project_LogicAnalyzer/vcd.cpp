@@ -7,10 +7,14 @@
    }
 
    void vcd::printbinary(unsigned char inputValue) {
-      if(((unsigned int)inputValue & 1)> 0) {
+      unsigned int temp;
+      for(int i=7;i<0;i--) {
+         temp = (unsigned int)inputValue & 1<<i;
+         if(temp > 0) {
              printf("1");
-      } else {
-          printf("0");
+         } else {
+             printf("0");
+         }
       }
    }
 

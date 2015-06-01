@@ -1,0 +1,11 @@
+class LogicAnalyzer {
+unsigned char *ptr;
+
+    public:
+       LogicAnalyzer();
+       void setScanRate(unsigned int);
+       void setTrigger(int);
+       void start(void);
+       void stop(void);
+       void DMAInit(void); 
+};
